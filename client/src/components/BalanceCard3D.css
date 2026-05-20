@@ -1,0 +1,127 @@
+.balance-card-3d {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card-inner {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+  min-height: 250px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-inner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: shimmer 6s infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-30%, -30%);
+  }
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-top h3 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.chip {
+  width: 50px;
+  height: 40px;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 20px;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.card-amount {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.currency {
+  font-size: 28px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.value {
+  font-size: 48px;
+  font-weight: 700;
+  display: block;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 0;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.name,
+.date {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0 0 0;
+  letter-spacing: 0.5px;
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent);
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+/* Hover effect */
+.balance-card-3d:hover .card-inner {
+  box-shadow: 0 30px 80px rgba(102, 126, 234, 0.4);
+}

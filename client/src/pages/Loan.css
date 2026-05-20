@@ -1,0 +1,260 @@
+.loan-page {
+  padding: 2rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid;
+}
+
+.alert-error {
+  background-color: #7f1d1d;
+  border-color: #dc2626;
+  color: #fecaca;
+}
+
+.alert-success {
+  background-color: #1f2937;
+  border-color: #10b981;
+  color: #86efac;
+}
+
+.loan-status-card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #475569;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.loan-status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.loan-status-header h3 {
+  color: #e2e8f0;
+  font-size: 1.3rem;
+}
+
+.loan-status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.status-pending {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.status-approved {
+  background-color: #10b981;
+  color: white;
+}
+
+.status-rejected {
+  background-color: #ef4444;
+  color: white;
+}
+
+.status-completed {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.loan-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.loan-detail {
+  background: #0f172a;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #334155;
+}
+
+.loan-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+.loan-value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.loan-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.loan-action-card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #475569;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.loan-action-card h3 {
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.card-description {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.loan-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 0.75rem 1rem;
+  background: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 0.5rem;
+  color: #f8fafc;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input-group input::placeholder {
+  color: #64748b;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.loan-submit-btn,
+.loan-cancel-btn,
+.repay-btn {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loan-submit-btn,
+.repay-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+}
+
+.loan-submit-btn:hover,
+.repay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.4);
+}
+
+.loan-cancel-btn {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #e2e8f0;
+}
+
+.loan-cancel-btn:hover {
+  background: #1e293b;
+  border-color: #64748b;
+}
+
+.repay-info {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #0f172a;
+  border-radius: 0.5rem;
+  border-left: 3px solid #3b82f6;
+}
+
+@media (max-width: 768px) {
+  .loan-page {
+    padding: 1rem;
+  }
+
+  .loan-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .loan-action-card {
+    padding: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .loan-submit-btn,
+  .loan-cancel-btn,
+  .repay-btn {
+    width: 100%;
+  }
+}

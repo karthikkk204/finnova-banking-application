@@ -1,0 +1,238 @@
+.admin-panel {
+  max-width: 1200px;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-stat-card.warning {
+  border-color: var(--warning);
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.admin-stat-card.success {
+  border-color: var(--success);
+  background: rgba(22, 163, 74, 0.1);
+}
+
+.admin-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.admin-stat-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.admin-tab {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-tab:hover {
+  background: var(--bg-input);
+  color: var(--text-primary);
+}
+
+.admin-tab.active {
+  background: var(--primary);
+  color: white;
+}
+
+.admin-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.users-table {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 1.5fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-input);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1.5fr 1.5fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background: var(--bg-input);
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.user-email {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.user-balance {
+  font-weight: 600;
+  color: #86efac;
+}
+
+.user-role {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  background: var(--bg-input);
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.loan-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.loan-badge.pending {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--warning);
+}
+
+.loan-badge.approved {
+  background: rgba(22, 163, 74, 0.2);
+  color: var(--success);
+}
+
+.loan-badge.none {
+  background: var(--bg-input);
+  color: var(--text-secondary);
+}
+
+.loan-requests {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.loan-request-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+.loan-request-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.loan-user-name {
+  font-weight: 600;
+}
+
+.loan-user-email {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.loan-amount {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--warning);
+  margin-top: 0.25rem;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.transaction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.tx-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tx-meta {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .table-header {
+    display: none;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

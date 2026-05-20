@@ -1,0 +1,206 @@
+.deposit-container {
+  padding: 2rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.deposit-content {
+  max-width: 800px;
+}
+
+.deposit-card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #475569;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.deposit-form {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.amount-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 1.2rem;
+  color: #64748b;
+  font-size: 1.25rem;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  background: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  color: #f8fafc;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.amount-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  color: #f8fafc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.quick-amounts {
+  margin-bottom: 1.5rem;
+}
+
+.quick-label {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.amount-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.75rem;
+}
+
+.amount-btn {
+  padding: 0.75rem;
+  background: #1e293b;
+  border: 1px solid #475569;
+  color: #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.amount-btn:hover {
+  background: #334155;
+  border-color: #64748b;
+  color: #f8fafc;
+}
+
+.error-message {
+  padding: 1rem;
+  background: #7f1d1d;
+  border: 1px solid #dc2626;
+  color: #fecaca;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  padding: 1rem;
+  background: #1f2937;
+  border: 1px solid #10b981;
+  color: #86efac;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.deposit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.deposit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.4);
+}
+
+.deposit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.deposit-info {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.deposit-info h3 {
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.deposit-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.deposit-info li {
+  padding: 0.5rem 0;
+  color: #cbd5e1;;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .deposit-container {
+    padding: 1rem;
+  }
+
+  .deposit-card {
+    padding: 1.5rem;
+  }
+
+  .amount-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
